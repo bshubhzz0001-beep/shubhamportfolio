@@ -37,7 +37,7 @@ export type PublicationItem = {
 export const patents: PatentItem[] = [
   {
     title: "An Apparatus for Extracting and Testing of Bituminous Mix",
-    status: "Under Granting",
+    status: "GRANTED",
     ref: "Indian Patent (37/22)",
     applicationNo: "202237",
     problem:

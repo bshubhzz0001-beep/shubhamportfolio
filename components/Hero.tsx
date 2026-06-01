@@ -12,6 +12,31 @@ import {
 import { profile } from "@/lib/profile";
 import { fadeInUp } from "@/lib/animations";
 
+const affiliatedMemberships = [
+  "Indian Concrete Institute (ICI)",
+  "Indian Roads Congress (IRC)",
+];
+
+const studentMemberships = [
+  "American Society of Civil Engineers (ASCE)",
+  "American Concrete Institute (ACI)",
+  "Engineers Australia",
+  "Concrete Institute of Australia (CIA)",
+  "Australian Institute of Building (AIB)",
+  "Australasian Corrosion Association (ACA)",
+  "Australian Society of Concrete Pavement",
+  "Asphalt Pavement Association of India",
+  "International Society of Asphalt Pavement",
+];
+
+function MembershipPill({ label }: { label: string }) {
+  return (
+    <span className="rounded-full border border-primary/40 bg-white px-2.5 py-1 text-[11px] font-medium text-text-secondary sm:text-xs">
+      {label}
+    </span>
+  );
+}
+
 export default function Hero() {
   return (
     <section
@@ -59,9 +84,28 @@ export default function Hero() {
             Sydney, Australia
           </p>
 
-          <p className="mt-5 text-sm leading-relaxed text-text-secondary">
-            <span className="font-semibold text-text-primary">Memberships:</span>
-          </p>
+          <div className="mt-5 space-y-3 text-left">
+            <div>
+              <p className="mb-2 text-xs font-bold text-primary sm:text-sm">
+                Affiliated Member:
+              </p>
+              <div className="flex flex-wrap justify-center gap-2 lg:justify-start">
+                {affiliatedMemberships.map((item) => (
+                  <MembershipPill key={item} label={item} />
+                ))}
+              </div>
+            </div>
+            <div>
+              <p className="mb-2 text-xs font-bold text-primary sm:text-sm">
+                Student Member:
+              </p>
+              <div className="flex flex-wrap justify-center gap-2 lg:justify-start">
+                {studentMemberships.map((item) => (
+                  <MembershipPill key={item} label={item} />
+                ))}
+              </div>
+            </div>
+          </div>
 
           <div className="mt-6 flex flex-wrap items-center justify-center gap-4 text-sm text-text-secondary lg:justify-start">
             <a
