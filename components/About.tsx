@@ -65,6 +65,15 @@ export default function About() {
               </li>
             ))}
           </ul>
+          <div className="mt-6 rounded-xl border border-primary/20 bg-primary/5 p-4">
+            <h4 className="text-sm font-semibold text-primary">
+              Australian Work Rights
+            </h4>
+            <p className="mt-2 text-sm text-text-secondary">
+              Available for immediate full-time roles with full Australian work
+              rights valid to March 2029.
+            </p>
+          </div>
         </motion.div>
       </div>
     </section>
