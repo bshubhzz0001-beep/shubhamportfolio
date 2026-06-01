@@ -13,9 +13,9 @@ const playfair = Playfair_Display({
 });
 
 export const metadata: Metadata = {
-  title: "Er. Shubham Rajendra Beldar Kumawat | Civil Engineer Portfolio",
+  title: "Shubham. R. Beldar. K. | Civil Engineer Portfolio",
   description:
-    "Portfolio of Er. Shubham Rajendra Beldar Kumawat — Graduate Civil Engineer (UTS), site & QA/QC experience, patents, publications, and infrastructure projects in Australia and India.",
+    "Portfolio of Shubham. R. Beldar. K. — Materials and QA engineer with experience in concrete, asphalt, pavements, research, and civil construction delivery.",
   keywords: [
     "Civil Engineering",
     "Material Engineering",

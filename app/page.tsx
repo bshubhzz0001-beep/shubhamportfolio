@@ -1,13 +1,10 @@
 import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
 import About from "@/components/About";
-import Snapshot from "@/components/Snapshot";
 import ResearchEquity from "@/components/ResearchEquity";
 import ProfessionalEquity from "@/components/ProfessionalEquity";
+import Skills from "@/components/Skills";
 import EducationEquity from "@/components/EducationEquity";
-import TeachingEquity from "@/components/TeachingEquity";
-import Toolbox from "@/components/Toolbox";
-import Goals from "@/components/Goals";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
 
@@ -18,13 +15,10 @@ export default function Home() {
       <main>
         <Hero />
         <About />
-        <Snapshot />
-        <ResearchEquity />
         <ProfessionalEquity />
+        <ResearchEquity />
+        <Skills />
         <EducationEquity />
-        <TeachingEquity />
-        <Toolbox />
-        <Goals />
         <Contact />
       </main>
       <Footer />

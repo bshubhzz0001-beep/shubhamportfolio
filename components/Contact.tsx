@@ -62,6 +62,9 @@ export default function Contact() {
               Open to civil infrastructure roles, research collaborations, and
               contractor-side engineering opportunities in Australia.
             </p>
+            <p className="mt-2 text-sm italic text-primary/80">
+              Australian Work Rights valid to March 2029
+            </p>
 
             <a
               href={profile.resumePath}

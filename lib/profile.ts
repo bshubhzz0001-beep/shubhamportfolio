@@ -2,10 +2,10 @@
  * Contact & identity — synced from RESUME SHUBHAM SNOWY HYDRO.pdf
  */
 export const profile = {
-  fullName: "Er. Shubham Rajendra Beldar Kumawat",
-  shortName: "Er. Shubham Beldar",
-  degree: "M.Eng (Civil Engineering) · B.Tech Civil Engineering",
-  tagline: "Graduate Civil Engineer · Infrastructure & Materials",
+  fullName: "Shubham. R. Beldar. K.",
+  shortName: "Shubham. R. Beldar. K.",
+  degree: "M.Eng (Civil) | B.Tech (Civil) | Diploma (Civil)",
+  tagline: "Materials & QA Engineer | Concrete | Asphalt | Pavements",
   applicationLine:
     "Full work rights in Australia (Subclass 485) until March 2029 · Open to infrastructure roles",
 
@@ -14,16 +14,15 @@ export const profile = {
   email: "bshubhzz0001@gmail.com",
   linkedin: "https://www.linkedin.com/in/beldar-kumawat-shubham-75b13622b",
   linkedinLabel: "linkedin.com/in/beldar-kumawat-shubham-75b13622b",
-  location: "Sydney, NSW, Australia",
+  location: "Sydney, Australia",
   country: "Australia",
 
-  memberships:
-    "Affiliated: ICI, IRC · Student Member: ASCE, ACI, Engineers Australia, CIA, AIB, ACA, ISAP",
+  memberships: "",
 
   roles: [
-    "Graduate Civil Engineer",
-    "Site & QA/QC",
-    "Research Assistant (UTS)",
+    "Materials Engineer",
+    "QA/QC Engineer",
+    "Pavement Engineer",
   ] as const,
 
   professionalSummary:

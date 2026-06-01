@@ -33,13 +33,36 @@ function StatusBadge({ status }: { status: string }) {
 
 export default function ResearchEquity() {
   return (
-    <section id="research" className="section-padding bg-white">
+    <section id="projects" className="section-padding bg-white">
       <div className="section-container">
         <SectionHeading
-          title="Research Equity"
+          title="Projects & Research"
           subtitle="Innovations, publications & intellectual property"
           icon={Microscope}
         />
+        <motion.div
+          initial="hidden"
+          whileInView="visible"
+          viewport={defaultViewport}
+          variants={staggerContainer}
+          className="mb-10 flex flex-wrap gap-3"
+        >
+          {[
+            "2 Indian Patents",
+            "4 Copyrights",
+            "1 Journal",
+            "3 ASCE Discussions",
+            "1 University Sponsored",
+          ].map((item) => (
+            <motion.span
+              key={item}
+              variants={fadeInUp}
+              className="rounded-full bg-primary/10 px-4 py-2 text-sm font-medium text-primary"
+            >
+              {item}
+            </motion.span>
+          ))}
+        </motion.div>
 
         <h3 className="mb-6 flex items-center gap-2 text-xl font-semibold text-text-primary">
           <FileText className="h-5 w-5 text-primary" />

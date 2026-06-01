@@ -6,11 +6,12 @@ import { cn } from "@/lib/utils";
 import { profile } from "@/lib/profile";
 
 const navLinks = [
+  { href: profile.resumePath, label: "Resume", external: true },
   { href: "#about", label: "About" },
-  { href: "#research", label: "Research" },
-  { href: "#professional", label: "Professional" },
+  { href: "#experience", label: "Experience" },
+  { href: "#projects", label: "Projects" },
+  { href: "#skills", label: "Skills" },
   { href: "#education", label: "Education" },
-  { href: "#teaching", label: "Teaching" },
   { href: "#contact", label: "Contact" },
 ];
 
@@ -52,20 +53,13 @@ export default function Navbar() {
         </a>
 
         <ul className="hidden items-center gap-6 lg:gap-8 md:flex">
-          <li>
-            <a
-              href={profile.resumePath}
-              download={profile.resumeFileName}
-              className="text-sm font-semibold text-secondary transition-colors hover:text-primary"
-            >
-              Resume
-            </a>
-          </li>
           {navLinks.map((link) => (
             <li key={link.href}>
               <a
                 href={link.href}
+                download={link.external ? profile.resumeFileName : undefined}
                 onClick={(e) => {
+                  if (link.external) return;
                   e.preventDefault();
                   handleNavClick(link.href);
                 }}
@@ -90,21 +84,16 @@ export default function Navbar() {
       {mobileOpen && (
         <div className="border-t border-accent bg-white px-4 py-4 md:hidden">
           <ul className="flex flex-col gap-3">
-            <li>
-              <a
-                href={profile.resumePath}
-                download={profile.resumeFileName}
-                className="block py-2 font-semibold text-secondary"
-                onClick={() => setMobileOpen(false)}
-              >
-                Resume (PDF)
-              </a>
-            </li>
             {navLinks.map((link) => (
               <li key={link.href}>
                 <a
                   href={link.href}
+                  download={link.external ? profile.resumeFileName : undefined}
                   onClick={(e) => {
+                    if (link.external) {
+                      setMobileOpen(false);
+                      return;
+                    }
                     e.preventDefault();
                     handleNavClick(link.href);
                   }}

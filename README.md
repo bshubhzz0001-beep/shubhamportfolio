@@ -1,6 +1,6 @@
-# Er. Shubham R. Beldar Kumawat — Portfolio
+# Shubham. R. Beldar. K. — Portfolio
 
-Professional portfolio website for Er. Shubham R. Beldar Kumawat, Civil Engineer applying for Masters/PhD in Material Engineering.
+Professional portfolio website for Shubham. R. Beldar. K., Materials and QA engineer in civil and pavement engineering.
 
 ## Tech Stack
 
