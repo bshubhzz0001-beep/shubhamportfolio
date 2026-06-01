@@ -43,22 +43,32 @@ export default function Hero() {
       id="hero"
       className="relative min-h-screen bg-gradient-to-br from-background via-background to-accent pt-16"
     >
-      <div className="section-container section-padding flex min-h-[calc(100vh-4rem)] flex-col items-center justify-center gap-8 lg:flex-row lg:gap-12">
+      <div className="section-container section-padding flex min-h-[calc(100vh-4rem)] flex-col items-center justify-center gap-10 lg:flex-row lg:items-center lg:gap-14">
         <motion.div
           initial="hidden"
           animate="visible"
           variants={fadeInUp}
           transition={{ duration: 0.6 }}
-          className="flex-shrink-0"
+          className="relative mx-auto flex-shrink-0 lg:mx-0"
         >
-          <div className="relative overflow-hidden rounded-xl border-2 border-primary shadow-card">
-            <Image
-              src="/shubham.jpg"
-              alt={profile.fullName}
-              width={120}
-              height={150}
-              className="object-cover"
-              priority
+          <div
+            className="absolute -inset-3 rounded-3xl bg-gradient-to-br from-primary/25 via-accent to-secondary/20 sm:-inset-4"
+            aria-hidden
+          />
+          <div className="relative rounded-2xl border-4 border-primary bg-white p-2 shadow-card-hover ring-2 ring-accent/60">
+            <div className="relative h-[300px] w-[240px] overflow-hidden rounded-xl sm:h-[360px] sm:w-[288px] lg:h-[400px] lg:w-[320px]">
+              <Image
+                src="/shubham.jpg"
+                alt={profile.fullName}
+                fill
+                sizes="(max-width: 640px) 240px, (max-width: 1024px) 288px, 320px"
+                className="object-cover object-[center_18%]"
+                priority
+              />
+            </div>
+            <div
+              className="absolute -bottom-1 left-1/2 h-1 w-24 -translate-x-1/2 rounded-full bg-secondary"
+              aria-hidden
             />
           </div>
         </motion.div>
